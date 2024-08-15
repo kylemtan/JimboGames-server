@@ -12,6 +12,10 @@ module.exports = (io, socket, roomInfo, playerIDMap, updateRoom) => {
       [roomInfo[room].gameInfo.teams[0].players[0]]: false,
       [roomInfo[room].gameInfo.teams[1].players[0]]: false,
     };
+    roomInfo[room].gameInfo.score = {
+      [roomInfo[room].gameInfo.teams[0].players[0]]: 0,
+      [roomInfo[room].gameInfo.teams[1].players[0]]: 0,
+    };
 
     callback({
       success: true,
@@ -23,8 +27,9 @@ module.exports = (io, socket, roomInfo, playerIDMap, updateRoom) => {
 
   const submitSushiGoatWord = (room, word, callback) => {
     roomInfo[room].gameInfo.ready[playerIDMap[socket.id].name] = true;
-    roomInfo[room].gameInfo.words[playerIDMap[socket.id].name].push(word);
+    roomInfo[room].gameInfo.words[playerIDMap[socket.id].name].push(word === "" ? "N/A" : "word");
     roomInfo[room].gameInfo.sushi[playerIDMap[socket.id].name].push(word.length);
+    roomInfo[room].gameInfo.score[playerIDMap[socket.id].name] += word.length;
 
     if (
       roomInfo[room].gameInfo.ready[

@@ -151,6 +151,7 @@ module.exports = () => {
       words: {},
       sushi: {},
       ready: {},
+      score: {},
       gameOver: false,
     }
   });
