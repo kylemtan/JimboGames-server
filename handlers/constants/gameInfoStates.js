@@ -126,7 +126,32 @@ module.exports = () => {
       gameOver: false,
     },
     sushi_goat: {
-      hi: 1
+      name: "Sushi Goat",
+      gameID: "sushi_goat",
+      options: {
+        timer: false,
+      },
+      teams: [
+        {
+          name: "P1",
+          players: [],
+          max: 1,
+        },
+        {
+          name: "P2",
+          players: [],
+          max: 1,
+        },
+        {
+          name: "Spectators",
+          players: [],
+          max: 99,
+        },
+      ],
+      words: {},
+      sushi: {},
+      ready: {},
+      gameOver: false,
     }
   });
 };
