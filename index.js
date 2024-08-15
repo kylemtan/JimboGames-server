@@ -10,6 +10,7 @@ const registerLobbyHandlers = require("./handlers/lobbyHandlers");
 //game handlers
 const registerLetrisHandler = require("./handlers/games/letrisHandler");
 const registerHackjackHandler = require("./handlers/games/hackjackHandler");
+const registerSushiGoatHandler = require("./handlers/games/SushiGoatHandler");
 
 app.use(cors());
 
@@ -17,8 +18,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    // origin: "http://localhost:3000",
-    origin: "https://jimbogames.netlify.app",
+    origin: "http://localhost:3000",
+    // origin: "https://jimbogames.netlify.app",
     methods: ["GET", "POST"],
   },
 });
@@ -39,6 +40,7 @@ io.on("connection", (socket) => {
   //games
   registerLetrisHandler(io, socket, roomInfo, playerIDMap, updateRoom);
   registerHackjackHandler(io, socket, roomInfo, playerIDMap, updateRoom);
+  registerSushiGoatHandler(io, socket, roomInfo, playerIDMap, updateRoom);
 });
 
 server.listen(3001, () => {

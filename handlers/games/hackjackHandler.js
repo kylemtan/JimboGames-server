@@ -1,5 +1,3 @@
-const hackjackPrograms = require("../constants/hackjackPrograms");
-
 module.exports = (io, socket, roomInfo, playerIDMap, updateRoom) => {
   const initializeHackjackGame = (room, callback) => {
     roomInfo[room].gameInfo.hackjackInfo = {
@@ -22,11 +20,10 @@ module.exports = (io, socket, roomInfo, playerIDMap, updateRoom) => {
           [roomInfo[room].gameInfo.teams[0].players[0]]: [],
           [roomInfo[room].gameInfo.teams[1].players[0]]: []
         },
-      },
-      programs: {
-        deck: hackjackPrograms(),
-        [roomInfo[room].gameInfo.teams[0].players[0]]: [],
-        [roomInfo[room].gameInfo.teams[1].players[0]]: []
+        programs: {
+          [roomInfo[room].gameInfo.teams[0].players[0]]: [],
+          [roomInfo[room].gameInfo.teams[1].players[0]]: []
+        },
       },
       turn: roomInfo[room].gameInfo.teams[0].players[0]
     }

@@ -1,58 +1,58 @@
 module.exports = () => {
   return (gameInfoStates = {
-    game_of_the_generals: {
-      name: "Game of the Generals",
-      gameID: "game_of_the_generals",
-      options: {
-        timer: false,
-      },
-      teams: [
-        {
-          name: "White",
-          players: [],
-          max: 1,
-        },
-        {
-          name: "Black",
-          players: [],
-          max: 1,
-        },
-        {
-          name: "Spectators",
-          players: [],
-          max: 99,
-        },
-      ],
-      board: [
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      ],
-      teamOneTurn: true,
-      gameOver: false,
-    },
-    golf_gulf: {
-      name: "Golf Gulf",
-      gameID: "golf_gulf",
-      options: {
-        timer: false,
-      },
-      teams: [
-        {
-          name: "Players",
-          players: [],
-          max: 16,
-        },
-        {
-          name: "Spectators",
-          players: [],
-          max: 99,
-        },
-      ],
-      course: 0,
-      golfInfo: {},
-      gameOver: false,
-    },
+    // game_of_the_generals: {
+    //   name: "Game of the Generals",
+    //   gameID: "game_of_the_generals",
+    //   options: {
+    //     timer: false,
+    //   },
+    //   teams: [
+    //     {
+    //       name: "White",
+    //       players: [],
+    //       max: 1,
+    //     },
+    //     {
+    //       name: "Black",
+    //       players: [],
+    //       max: 1,
+    //     },
+    //     {
+    //       name: "Spectators",
+    //       players: [],
+    //       max: 99,
+    //     },
+    //   ],
+    //   board: [
+    //     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    //     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    //     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    //   ],
+    //   teamOneTurn: true,
+    //   gameOver: false,
+    // },
+    // golf_gulf: {
+    //   name: "Golf Gulf",
+    //   gameID: "golf_gulf",
+    //   options: {
+    //     timer: false,
+    //   },
+    //   teams: [
+    //     {
+    //       name: "Players",
+    //       players: [],
+    //       max: 16,
+    //     },
+    //     {
+    //       name: "Spectators",
+    //       players: [],
+    //       max: 99,
+    //     },
+    //   ],
+    //   course: 0,
+    //   golfInfo: {},
+    //   gameOver: false,
+    // },
     letris: {
       name: "Letris",
       gameID: "letris",
@@ -125,5 +125,8 @@ module.exports = () => {
       },
       gameOver: false,
     },
+    sushi_goat: {
+      hi: 1
+    }
   });
 };
